@@ -1,0 +1,20 @@
+.it-exchange-product-quick-shop {
+	line-height: 2;
+}
+.it-exchange-product-quick-shop.it-exchange-right {
+	margin-left: .5em;
+}
+.it-exchange-product-quick-shop-featured {
+	position: absolute;
+	margin-top: -5em;
+	margin-left: 1.5em;
+	padding: .5em 1em;
+	background: #FFF;
+	color: #111;
+	font-size: 12px;
+	text-decoration: none;
+}
+.it-exchange-product-quick-shop-featured:hover {
+	background: #111;
+	color: #FFF;
+}
