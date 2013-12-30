@@ -142,7 +142,7 @@ function it_exchange_quick_shop_addon_admin_wp_enqueue_styles() {
 */
 function it_exchange_quick_shop_addon_load_public_scripts( $current_view ) {
 	// Frontend Quick Shop Dashboard CSS & JS
-	wp_enqueue_script( 'it-exchange-quick-shop-addon-public-js', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/js/quick-shop.js' ), array( 'jquery', 'fitvids' ), false, true );
+	wp_enqueue_script( 'it-exchange-quick-shop-addon-public-js', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/js/quick-shop.js' ), array( 'jquery', 'fitvids', 'jquery-colorbox' ), false, true );
 	wp_localize_script( 'it-exchange-quick-shop-addon-public-js', 'it_exchange_quick_shop', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 	wp_enqueue_style( 'it-exchange-quick-shop-addon-public-css', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/styles/quick-shop.css' ) );
 }

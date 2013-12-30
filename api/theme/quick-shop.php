@@ -61,10 +61,15 @@ class IT_Theme_API_Quick_Shop implements IT_Theme_API {
 	*/
 	function button( $options=array() ) {
 
-		$id = empty( $this->product->ID ) ? false : '#product-' . $this->product->ID;
+		$id = empty( $this->product->ID ) ? false : $this->product->ID;
 
-		if ( $options['has'] )
+		if ( $options['has'] ) {
 			return (boolean) $id;
+		}
+
+		if ( false === $id ) {
+			return;
+		}
 
 		$result = '';
 		$defaults   = array(
@@ -78,7 +83,7 @@ class IT_Theme_API_Quick_Shop implements IT_Theme_API {
 
 		$result .= $options['before'];
 
-		$result .= '<a class="it-exchange-product-quick-shop' . $class . '" href="' . $id . '">';
+		$result .= '<a href class="it-exchange-product-quick-shop' . $class . '" data-product-id="' . $id . '">';
 		$result .= $options['label'];
 		$result .= '</a>';
 
