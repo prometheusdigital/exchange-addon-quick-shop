@@ -39,10 +39,12 @@ add_action( 'admin_notices', 'it_exchange_quick_shop_addon_show_version_nag' );
  * @return void
 */
 function it_exchange_quick_shop_addon_load_public_scripts( $current_view ) {
-	// Frontend Quick Shop Dashboard CSS & JS
-	wp_enqueue_script( 'it-exchange-quick-shop-addon-public-js', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/js/quick-shop.js' ), array( 'jquery', 'fitvids', 'jquery-colorbox' ), false, true );
-	wp_localize_script( 'it-exchange-quick-shop-addon-public-js', 'it_exchange_quick_shop', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-	wp_enqueue_style( 'it-exchange-quick-shop-addon-public-css', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/styles/quick-shop.css' ) );
+	// Frontend Quick Shop Store CSS & JS
+	if ( it_exchange_is_page( 'store' ) ) {
+		wp_enqueue_script( 'it-exchange-quick-shop-addon-public-js', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/js/quick-shop.js' ), array( 'jquery', 'jquery-colorbox' ), false, true );
+		wp_localize_script( 'it-exchange-quick-shop-addon-public-js', 'it_exchange_quick_shop', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+		wp_enqueue_style( 'it-exchange-quick-shop-addon-public-css', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/styles/quick-shop.css' ), array( 'it-exchange-icon-fonts' ) );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'it_exchange_quick_shop_addon_load_public_scripts' );
 
