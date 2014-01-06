@@ -63,7 +63,7 @@ add_action( 'plugins_loaded', 'it_exchange_quick_shop_set_textdomain' );
  * @return void
 */
 function ithemes_exchange_addon_quick_shop_updater_register( $updater ) { 
-	    $updater->register( 'exchange-addon-quick-shop', __FILE__ );
+	$updater->register( 'exchange-addon-quick-shop', __FILE__ );
 }
 add_action( 'ithemes_updater_register', 'ithemes_exchange_addon_quick_shop_updater_register' );
 require( dirname( __FILE__ ) . '/lib/updater/load.php' );
