@@ -62,11 +62,22 @@ function it_exchange_quick_shop_addon_template_path( $possible_template_paths, $
 }
 add_filter( 'it_exchange_possible_template_paths', 'it_exchange_quick_shop_addon_template_path', 10, 2 );
 
+/**
+ * Adds Quick Shop button to the product elements on the store.
+ *
+ * @since 1.0.0
+*/
 function it_exchange_quick_shop_content_store_after_product_info_hook() {
 	it_exchange_get_template_part( 'content', 'store/elements/quick-shop' );
 }
 add_action( 'it_exchange_content_store_before_permalink_element', 'it_exchange_quick_shop_content_store_after_product_info_hook' );
 
+/**
+ * If a product has a featured image, this removes the quick shop button
+ * from the elements loop and hooks it into the featured image template.
+ *
+ * @since 1.0.0
+*/
 function it_exchange_quick_shop_content_after_featured_image_hook() {
 	if ( it_exchange( 'product', 'has-featured-image' ) === false ) {
 		return;
