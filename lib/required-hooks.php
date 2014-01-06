@@ -213,3 +213,20 @@ function it_exchange_quick_shop_add_to_cart( $product_id ) {
 
 	return $result;
 }
+
+/**
+ * Add the super widget to the footer of the store page
+ * if a super widget does not exist on the page.
+ *
+ * @since 1.0.0
+*/
+function it_exchange_quick_shop_add_super_widget() {
+	if ( it_exchange_is_page( 'store' ) && ! is_active_widget( false, false, 'it-exchange-super-widget' ) ) {
+		$args['before_widget'] = '<div class="it-exchange-product-sw single-product-super-widget it-exchange-hidden">';
+		$args['after_widget'] = '</div>';
+		$args['enqueue_hide_script'] = false;
+
+		the_widget( 'IT_Exchange_Super_Widget', array(), $args );
+	}
+}
+add_action( 'wp_footer', 'it_exchange_quick_shop_add_super_widget' );
