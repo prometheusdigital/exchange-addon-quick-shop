@@ -20,8 +20,3 @@ include( 'lib/required-hooks.php' );
  * We decided to place all AJAX hooked functions into this file, just for ease of use
 */
 include( 'lib/addon-ajax-hooks.php' );
-
-/**
- * New Product Features added by the Exchange Membership Add-on.
-*/
-// require( 'lib/product-features/load.php' );
