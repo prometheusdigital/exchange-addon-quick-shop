@@ -29,7 +29,7 @@ function it_exchange_register_quick_shop_addon() {
 		'description'       => __( 'Adds a quick shop feature to the store page.', 'LION' ),
 		'author'            => 'iThemes',
 		'author_url'        => 'http://ithemes.com/exchange/quick-shop/',
-		'icon'              => ITUtility::get_url_from_file( dirname( __FILE__ ) . '/lib/images/featuredvideo50px.png' ),
+		'icon'              => ITUtility::get_url_from_file( dirname( __FILE__ ) . '/lib/images/quickshop50px.png' ),
 		'file'              => dirname( __FILE__ ) . '/init.php',
 		'category'          => 'video',
 		'basename'          => plugin_basename( __FILE__ ),
