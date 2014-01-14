@@ -36,7 +36,7 @@ function it_exchange_quick_shop_initialize_product() {
 	ob_start();
 
 	?>
-		<div id="it-exchange-quick-shop" class="it-exchange-columns-wrapper">
+		<div id="it-exchange-quick-shop" class="it-exchange-columns-wrapper <?php echo ( isset( $product['featured_image'] ) ) ? 'it-exchange-quick-shop-has-featured-image' : 'it-exchange-quick-shop-no-featured-image'; ?>">
 			<?php if ( isset( $product['featured_image'] ) ) : ?>
 				<div class="it-exchange-column it-exchange-featured-image">
 					<div class="it-exchange-column-inner">
