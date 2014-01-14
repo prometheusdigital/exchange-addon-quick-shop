@@ -73,17 +73,25 @@ class IT_Theme_API_Quick_Shop implements IT_Theme_API {
 
 		$result = '';
 		$defaults   = array(
-			'before' => '',
-			'after'  => '',
-			'label'  => __( 'Quick Shop', 'LION' )
+			'before'            => '',
+			'after'             => '',
+			'label'             => __( 'Quick Shop', 'LION' ),
+			'buy_now_label'     => __( 'Buy Now', 'LION' ),
+			'add_to_cart_label' => __( 'Add to Cart', 'LION' ),
+			'on_hover'          => false
 		);
+
 		$options = ITUtility::merge_defaults( $options, $defaults );
-		
+
 		$class = it_exchange( 'product', 'has-featured-image' ) ? ' it-exchange-product-quick-shop-featured' : ' it-exchange-right';
+
+		if ( it_exchange( 'product', 'has-featured-image' ) ) {
+			$class .= ( $options['on_hover'] == true ) ? ' it-exchange-hidden' : '';
+		}
 
 		$result .= $options['before'];
 
-		$result .= '<a href class="it-exchange-product-quick-shop' . $class . '" data-product-id="' . $id . '">';
+		$result .= '<a href class="it-exchange-product-quick-shop' . $class . '" data-product-id="' . $id . '" data-buy-now="' . $options['buy_now_label'] . '" data-add-to-cart="' . $options['add_to_cart_label'] . '">';
 		$result .= $options['label'];
 		$result .= '</a>';
 

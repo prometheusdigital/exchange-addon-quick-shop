@@ -96,7 +96,7 @@ add_action( 'it_exchange_content_store_after_featured_image_element', 'it_exchan
  * @since 1.0.0
  * @var $product_id
 */
-function it_exchange_quick_shop_buy_now( $product_id ) {
+function it_exchange_quick_shop_buy_now( $product_id, $label ) {
 	
 	// Setting this filter to true will disable the Buy Now Button
 	if ( apply_filters( 'it_exchange_disable_buy_now', false, $product_id ) ) {
@@ -110,7 +110,7 @@ function it_exchange_quick_shop_buy_now( $product_id ) {
 		'before'              => '',
 		'after'               => '',
 		'class'               => false,
-		'label'               => __( 'Buy Now', 'LION' ),
+		'label'               => $label,
 		'button-type'         => 'submit',
 		'button-name'         => false,
 		'out-of-stock-text'   => __( 'Out of stock.', 'LION' ),
@@ -159,7 +159,7 @@ function it_exchange_quick_shop_buy_now( $product_id ) {
  * @since 1.0.0
  * @var $product_id
 */
-function it_exchange_quick_shop_add_to_cart( $product_id ) {
+function it_exchange_quick_shop_add_to_cart( $product_id, $label ) {
 	// Parse options
 	$result        = false;
 
@@ -167,7 +167,7 @@ function it_exchange_quick_shop_add_to_cart( $product_id ) {
 		'before'              => '',
 		'after'               => '',
 		'class'               => false,
-		'label'               => __( 'Add to Cart', 'LION' ),
+		'label'               => $label,
 		'button-type'         => 'submit',
 		'button-name'         => false,
 		'out-of-stock-text'   => __( 'Out of stock.', 'LION' ),

@@ -13,6 +13,8 @@
 */
 function it_exchange_quick_shop_initialize_product() {
 	$product_id = $_POST['id'];
+	$buy_now_text = $_POST['buy'];
+	$add_to_cart_text = $_POST['add'];
 
 	$args['before_widget'] = '<div class="it-exchange-product-sw single-product-super-widget">';
 	$args['after_widget'] = '</div>';
@@ -23,8 +25,8 @@ function it_exchange_quick_shop_initialize_product() {
 		'title'       => it_exchange_get_product_feature( $product_id, 'title' ),
 		'description' => it_exchange_get_product_feature( $product_id, 'description' ),
 		'price'       => it_exchange_format_price( it_exchange_get_product_feature( $product_id, 'base-price' ) ),
-		'buy_now'     => it_exchange_quick_shop_buy_now( $product_id ),
-		'add_to_cart' => it_exchange_quick_shop_add_to_cart( $product_id )
+		'buy_now'     => it_exchange_quick_shop_buy_now( $product_id, $buy_now_text ),
+		'add_to_cart' => it_exchange_quick_shop_add_to_cart( $product_id, $add_to_cart_text )
 	);
 
 	if ( isset( $product['images'][0] ) ) {
