@@ -1,6 +1,6 @@
 <?php
 /**
  * Loads the theme API
- * @package IT_Exchange_Addon_Quick_Shop
+ * @package IT_Exchange_Addon_Quick_View
  */
-include( 'theme/quick-shop.php' );
+include( 'theme/quick-view.php' );

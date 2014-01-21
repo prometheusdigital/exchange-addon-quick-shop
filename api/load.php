@@ -1,8 +1,8 @@
 <?php
 /**
- * iThemes Exchange Quick Shop Add-on
+ * iThemes Exchange Quick View Add-on
  * load theme API functions
- * @package IT_Exchange_Addon_Quick_Shop
+ * @package IT_Exchange_Addon_Quick_View
  * @since 1.0.0
 */
 

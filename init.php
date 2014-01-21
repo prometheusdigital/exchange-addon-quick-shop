@@ -1,7 +1,7 @@
 <?php
 /**
  * iThemes Exchange Membership Add-on
- * @package exchange-addon-quick-shop
+ * @package exchange-addon-quick-view
  * @since 1.0.0
 */
 

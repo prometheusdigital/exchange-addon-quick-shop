@@ -1,18 +1,18 @@
 <?php
 /**
- * Quick Shop class for THEME API
+ * Quick View class for THEME API
  *
  * @since 1.0.0
 */
 
-class IT_Theme_API_Quick_Shop implements IT_Theme_API {
+class IT_Theme_API_Quick_View implements IT_Theme_API {
 	
 	/**
 	 * API context
 	 * @var string $_context
 	 * @since 1.0.0
 	*/
-	private $_context = 'quick-shop';
+	private $_context = 'quick-view';
 
 	/**	
 	 * Maps api tags to methods
@@ -37,7 +37,7 @@ class IT_Theme_API_Quick_Shop implements IT_Theme_API {
 	 *
 	 * @return void
 	*/
-	function IT_Theme_API_Quick_Shop() {
+	function IT_Theme_API_Quick_View() {
 		// Set the current global product as a property
 		$this->product = empty( $GLOBALS['it_exchange']['product'] ) ? false : $GLOBALS['it_exchange']['product'];
 	}
@@ -75,7 +75,7 @@ class IT_Theme_API_Quick_Shop implements IT_Theme_API {
 		$defaults   = array(
 			'before'            => '',
 			'after'             => '',
-			'label'             => __( 'Quick Shop', 'LION' ),
+			'label'             => __( 'Quick View', 'LION' ),
 			'buy_now_label'     => __( 'Buy Now', 'LION' ),
 			'add_to_cart_label' => __( 'Add to Cart', 'LION' ),
 			'on_hover'          => false
@@ -83,7 +83,7 @@ class IT_Theme_API_Quick_Shop implements IT_Theme_API {
 
 		$options = ITUtility::merge_defaults( $options, $defaults );
 
-		$class = it_exchange( 'product', 'has-featured-image' ) ? ' it-exchange-product-quick-shop-featured' : ' it-exchange-right';
+		$class = it_exchange( 'product', 'has-featured-image' ) ? ' it-exchange-product-quick-view-featured' : ' it-exchange-right';
 
 		if ( it_exchange( 'product', 'has-featured-image' ) ) {
 			$class .= ( $options['on_hover'] == true ) ? ' it-exchange-hidden' : '';
@@ -91,7 +91,7 @@ class IT_Theme_API_Quick_Shop implements IT_Theme_API {
 
 		$result .= $options['before'];
 
-		$result .= '<a href class="it-exchange-product-quick-shop' . $class . '" data-product-id="' . $id . '" data-buy-now="' . $options['buy_now_label'] . '" data-add-to-cart="' . $options['add_to_cart_label'] . '">';
+		$result .= '<a href class="it-exchange-product-quick-view' . $class . '" data-product-id="' . $id . '" data-buy-now="' . $options['buy_now_label'] . '" data-add-to-cart="' . $options['add_to_cart_label'] . '">';
 		$result .= $options['label'];
 		$result .= '</a>';
 
