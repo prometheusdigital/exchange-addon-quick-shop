@@ -13,8 +13,15 @@
 */
 function it_exchange_quick_view_initialize_product() {
 	$product_id = $_POST['id'];
-	$buy_now_text = $_POST['buy'];
-	$add_to_cart_text = $_POST['add'];
+
+	/**
+	 * Disables multi item carts if selecting a product with auto-renew enabled
+	 * because you cannot mix auto-renew prices with non-auto-renew prices in
+	 * payment gateways.
+	*/
+	if ( it_exchange_product_supports_feature( $product_id, 'recurring-payments', array( 'setting' => 'auto-renew' ) ) )
+		if ( it_exchange_product_has_feature( $product_id, 'recurring-payments', array( 'setting' => 'auto-renew' ) ) )
+			add_filter( 'it_exchange_multi_item_cart_allowed', '__return_false' );
 
 	if ( it_exchange_get_product( $product_id ) ) {
 		it_exchange_set_product( $product_id );
