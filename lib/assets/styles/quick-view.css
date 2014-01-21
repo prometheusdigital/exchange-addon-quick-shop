@@ -24,7 +24,7 @@
 #it-exchange-quick-view-container .it-exchange-product-images-gallery .it-exchange-thumbnail-images li:nth-child(3n+2) span{margin-right:2px;margin-left:2px;}
 #it-exchange-quick-view-container .it-exchange-product-images-gallery .it-exchange-thumbnail-images li:nth-child(3n+3) span{margin-left:4px;}
 #it-exchange-quick-view-container .it-exchange-product-images-gallery .it-exchange-thumbnail-images li span.current{border-color:#AAA;}
-#it-exchange-quick-view-container .it-exchange-product-images-gallery .it-exchange-thumbnail-images img{display:block;}
+#it-exchange-quick-view-container .it-exchange-product-images-gallery .it-exchange-thumbnail-images img{display:block;margin:0;padding:0;}
 #it-exchange-quick-view-container .it-exchange-product-no-images .it-exchange-product-info{width:100%;}
 .it-exchange-colorbox-quick-view #cboxContent #cboxClose{top:.5em;right:.5em;}
 
