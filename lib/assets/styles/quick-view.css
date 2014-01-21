@@ -5,7 +5,7 @@
 .it-exchange-product-quick-view-featured:hover{background:#111;color:#FFF;}
 .it-exchange-product:hover .it-exchange-product-quick-view-featured.it-exchange-hidden{display:block;}
 /** -----------------------------------------------------:[ quick view ]:---------- */
-#it-exchange-quick-view-container{width:100%;max-width:960px;margin:0 auto;background:#FFF;line-height:1.5;}
+#it-exchange-quick-view-container{width:100%;max-width:960px;margin:0 auto;background:#FFF;line-height:1.5;box-shadow: 0 3px 40px rgba(0, 0, 0, 0.1); border: 1px solid #EBEBEB;}
 #it-exchange-quick-view-container #it-exchange-quick-view{padding:2em;}
 #it-exchange-quick-view-container .it-exchange-product-images{width:50%;}
 #it-exchange-quick-view-container .it-exchange-product-images .it-exchange-column-inner{margin-right:1em;}
@@ -27,3 +27,11 @@
 #it-exchange-quick-view-container .it-exchange-product-images-gallery .it-exchange-thumbnail-images img{display:block;}
 #it-exchange-quick-view-container .it-exchange-product-no-images .it-exchange-product-info{width:100%;}
 .it-exchange-colorbox-quick-view #cboxContent #cboxClose{top:.5em;right:.5em;}
+
+/** -----------------------------------------------------:[ processing ]:---------- */
+#it-exchange-quick-view-processing{padding:1em 0;text-align:center;}
+#it-exchange-quick-view-processing span{width:20px;height:20px;border:3px solid transparent;display:inline-block;border-radius:50%;-webkit-animation:stripe-processing-payment 1s 0 infinite alternate;-moz-animation:stripe-processing-payment 1s 0 infinite alternate;-o-animation:stripe-processing-payment 1s 0 infinite alternate;animation:stripe-processing-payment 1s 0 infinite alternate;}
+@-webkit-keyframes stripe-processing-payment{0%{border-top-color:#888;}33%{border-right-color:#888;}66%{border-bottom-color:#888;}100%{border-left-color:#888;}}
+@-moz-keyframes stripe-processing-payment{0%{border-top-color:#888;}33%{border-right-color:#888;}66%{border-bottom-color:#888;}100%{border-left-color:#888;}}
+@-o-keyframes stripe-processing-payment{0%{border-top-color:#888;}33%{border-right-color:#888;}66%{border-bottom-color:#888;}100%{border-left-color:#888;}}
+@keyframes stripe-processing-payment{0%{border-top-color:#888;}33%{border-right-color:#888;}66%{border-bottom-color:#888;}100%{border-left-color:#888;}}
