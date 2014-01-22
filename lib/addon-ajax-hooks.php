@@ -25,7 +25,7 @@ function it_exchange_quick_view_initialize_product() {
 
 	if ( it_exchange_get_product( $product_id ) ) {
 		it_exchange_set_product( $product_id );
-		
+
 		it_exchange_get_template_part( 'content-quick-view' );
 	} else {
 		exit;
@@ -35,3 +35,21 @@ function it_exchange_quick_view_initialize_product() {
 }
 add_action( 'it_exchange_processing_super_widget_ajax_it-exchange-quick-view-initialize-product', 'it_exchange_quick_view_initialize_product' );
 add_action( 'it_exchange_processing_super_widget_ajax_nopriv_it-exchange-quick-view-initialize-product', 'it_exchange_quick_view_initialize_product');
+
+/**
+ * AJAX function called load the product quick view.
+ *
+ * @since 1.0.0
+ * @return string HTML output of product.
+*/
+function it_exchange_quick_view_product_added_to_cart() {
+	$product_id = $_POST['id'];
+
+	$items = it_exchange_get_cart_products();
+
+	ITUtility::print_r( $items );
+
+	exit;
+}
+add_action( 'it_exchange_processing_super_widget_ajax_it-exchange-quick-view-product-added-to-cart', 'it_exchange_quick_view_product_added_to_cart' );
+add_action( 'it_exchange_processing_super_widget_ajax_nopriv_it-exchange-quick-view-product-added-to-cart', 'it_exchange_quick_view_product_added_to_cart');
