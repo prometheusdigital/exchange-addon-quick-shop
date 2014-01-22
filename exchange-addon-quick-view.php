@@ -31,7 +31,7 @@ function it_exchange_register_quick_view_addon() {
 		'author_url'        => 'http://ithemes.com/exchange/quick-view/',
 		'icon'              => ITUtility::get_url_from_file( dirname( __FILE__ ) . '/lib/images/quickview50px.png' ),
 		'file'              => dirname( __FILE__ ) . '/init.php',
-		'category'          => 'video',
+		'category'          => 'other',
 		'basename'          => plugin_basename( __FILE__ ),
 		'labels'      => array(
 			'singular_name' => __( 'Quick View', 'LION' ),
