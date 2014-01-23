@@ -33,7 +33,7 @@
 
 /** -----------------------------------------------------:[ modes ]:---------- */
 #it-exchange-quick-view-container.super-widget-mode{max-width:400px;}
-#it-exchange-quick-view-container.add-to-cart-mode{max-width:700px;}
+#it-exchange-quick-view-container.add-to-cart-mode{max-width:500px;}
 
 /** -----------------------------------------------------:[ processing ]:---------- */
 #it-exchange-quick-view-processing{padding: 5em 0;text-align:center;}
@@ -42,3 +42,18 @@
 @-moz-keyframes stripe-processing-payment{0%{border-top-color:#888;}33%{border-right-color:#888;}66%{border-bottom-color:#888;}100%{border-left-color:#888;}}
 @-o-keyframes stripe-processing-payment{0%{border-top-color:#888;}33%{border-right-color:#888;}66%{border-bottom-color:#888;}100%{border-left-color:#888;}}
 @keyframes stripe-processing-payment{0%{border-top-color:#888;}33%{border-right-color:#888;}66%{border-bottom-color:#888;}100%{border-left-color:#888;}}
+
+/** -----------------------------------------------------:[ product added ]:---------- */
+#it-exchange-quick-view-added .it-exchange-product-added-title{background:#F6F6F6;border-bottom:1px solid #F0F0F0;font-size:.8em;}
+#it-exchange-quick-view-added .it-exchange-product-info{min-height:110px;width:100%;border-bottom:1px solid #F0F0F0;}
+#it-exchange-quick-view-added .it-exchange-inner{padding:1em;}
+#it-exchange-quick-view-added .it-exchange-column-inner{padding:1em;}
+#it-exchange-quick-view-added .it-exchange-featured-image{position:absolute;max-width:80px;}
+#it-exchange-quick-view-container #it-exchange-quick-view-added .it-exchange-product-price,
+#it-exchange-quick-view-container #it-exchange-quick-view-added .it-exchange-product-title{margin-left:100px;}
+#it-exchange-quick-view-added .it-exchange-product-title{font-size:1em;}
+#it-exchange-quick-view-added .it-exchange-product-price p{margin-bottom:0;}
+#it-exchange-quick-view-added .it-exchange-cart-summary a{display:block;width:100%;padding:1em 0;margin-top:1em;background:#EEE;text-align:center;text-decoration:none;font-size:1.2em;}
+.it-exchange-quick-view-cart-item-count{margin-bottom:1em;font-weight:bold;}
+#it-exchange-quick-view-added .it-exchange-quick-view-total{font-size:1.2em;}
+#it-exchange-quick-view-added .it-exchange-quick-view-totals span{float:right;}

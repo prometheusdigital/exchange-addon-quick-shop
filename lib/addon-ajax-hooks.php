@@ -37,7 +37,7 @@ add_action( 'it_exchange_processing_super_widget_ajax_it-exchange-quick-view-ini
 add_action( 'it_exchange_processing_super_widget_ajax_nopriv_it-exchange-quick-view-initialize-product', 'it_exchange_quick_view_initialize_product');
 
 /**
- * AJAX function called load the product quick view.
+ * AJAX function called to set the added to cart templates.
  *
  * @since 1.0.0
  * @return string HTML output of product.
@@ -45,9 +45,13 @@ add_action( 'it_exchange_processing_super_widget_ajax_nopriv_it-exchange-quick-v
 function it_exchange_quick_view_product_added_to_cart() {
 	$product_id = $_POST['id'];
 
-	$items = it_exchange_get_cart_products();
+	if ( it_exchange_get_product( $product_id ) ) {
+		it_exchange_set_product( $product_id );
 
-	ITUtility::print_r( $items );
+		it_exchange_get_template_part( 'content-quick-view-added' );
+	} else {
+		exit;
+	}
 
 	exit;
 }

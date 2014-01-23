@@ -41,7 +41,7 @@ add_action( 'admin_notices', 'it_exchange_quick_view_addon_show_version_nag' );
 function it_exchange_quick_view_addon_load_public_scripts( $current_view ) {
 	// Frontend Quick View Store CSS & JS
 	if ( it_exchange_is_page( 'store' ) ) {
-		wp_enqueue_script( 'it-exchange-quick-view-addon-public-js', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/js/quick-view.js' ), array( 'jquery', 'jquery-colorbox' ), false, true );
+		wp_enqueue_script( 'it-exchange-quick-view-addon-public-js', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/js/quick-view.js' ), array( 'jquery', 'jquery-colorbox', 'it-exchange-super-widget' ), false, true );
 		wp_enqueue_style( 'it-exchange-quick-view-addon-public-css', ITUtility::get_url_from_file( dirname( __FILE__ ) . '/assets/styles/quick-view.css' ), array( 'it-exchange-icon-fonts' ) );
 	}
 }
