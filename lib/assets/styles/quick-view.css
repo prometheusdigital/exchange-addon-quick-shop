@@ -27,6 +27,10 @@
 #it-exchange-quick-view-container .it-exchange-product-no-images .it-exchange-product-info{width:100%;}
 .it-exchange-colorbox-quick-view #cboxContent #cboxClose{top:.5em;right:.5em;}
 
+/** -----------------------------------------------------:[ processing ]:---------- */
+#it-exchange-quick-view-container .it-exchange-sw-processing-billing-address,
+#it-exchange-quick-view-container .it-exchange-sw-processing-shipping-address{padding:2em;}
+
 /** -----------------------------------------------------:[ modes ]:---------- */
 #it-exchange-quick-view-container.super-widget-mode{max-width:400px;}
 #it-exchange-quick-view-container.add-to-cart-mode{max-width:700px;}
