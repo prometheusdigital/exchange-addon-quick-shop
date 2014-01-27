@@ -16,7 +16,7 @@
 ?>
 
 <?php do_action( 'it_exchange_content_confirmation_before_totals_subtotal_element' ); ?>
-<div class="it-exchange-quick-view-totals it-exchange-quick-view-subtotaltotal">
+<div class="it-exchange-quick-view-totals it-exchange-quick-view-subtotal">
 	<p><?php _e( 'Subotal:', 'LION' ); ?><span><?php it_exchange( 'cart', 'subtotal' ); ?></span></p>
 </div>
 <?php do_action( 'it_exchange_content_confirmation_after_totals_subtotal_element' ); ?>
