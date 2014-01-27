@@ -27,6 +27,25 @@ function it_exchange_quick_view_addon_show_version_nag() {
 		</script>
 		<?php
 	}
+
+	if ( function_exists( 'it_exchange_register_stripe_addon' ) ) {
+		$exchange_addon_stripe = get_plugin_data( plugin_dir_path( dirname( dirname( __FILE__  ) ) ) . 'exchange-addon-stripe/exchange-addon-stripe.php' );
+
+		if ( version_compare( $exchange_addon_stripe['Version'], '1.2.0', '<' ) ) {
+			?>
+			<div class="it-exchange-nag it-exchange-add-on-min-version-nag">
+				<?php printf( __( 'The Quick View add-on requires Exchange Add-on Stripe version 1.2.0 or greater to function properly.', 'LION' ) ); ?>
+			</div>
+			<script type="text/javascript">
+				jQuery( document ).ready( function() {
+					if ( jQuery( '.wrap > h2' ).length == '1' ) {
+						jQuery(".it-exchange-add-on-min-version-nag").insertAfter('.wrap > h2').addClass( 'after-h2' );
+					}
+				});
+			</script>
+			<?php
+		}
+	}
 }
 add_action( 'admin_notices', 'it_exchange_quick_view_addon_show_version_nag' );
 
