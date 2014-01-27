@@ -13,10 +13,10 @@
  * @return void
 */
 function it_exchange_quick_view_addon_show_version_nag() {
-	if ( $GLOBALS['it_exchange']['version'] < '1.5.0' ) {
+	if ( version_compare( $GLOBALS['it_exchange']['version'], '1.7.15', '<' ) ) {
 		?>
 		<div class="it-exchange-nag it-exchange-add-on-min-version-nag">
-			<?php printf( __( 'The Quick View add-on requires iThemes Exchange version 1.5.0 or greater. %sPlease upgrade Exchange%s.', 'LION' ), '<a href="' . admin_url( 'update-core.php' ) . '">', '</a>' ); ?>
+			<?php printf( __( 'The Quick View add-on requires iThemes Exchange version 1.7.16 or greater. %sPlease upgrade Exchange%s.', 'LION' ), '<a href="' . admin_url( 'update-core.php' ) . '">', '</a>' ); ?>
 		</div>
 		<script type="text/javascript">
 			jQuery( document ).ready( function() {
@@ -78,13 +78,11 @@ add_action( 'it_exchange_content_store_before_permalink_element', 'it_exchange_q
  * @since 1.0.0
 */
 function it_exchange_quick_view_content_after_featured_image_hook() {
-	if ( it_exchange( 'product', 'has-featured-image' ) === false ) {
-		return;
+	if ( it_exchange( 'product', 'has-featured-image' ) ) {
+		remove_action( 'it_exchange_content_store_before_permalink_element', 'it_exchange_quick_view_content_store_after_product_info_hook' );
+
+		it_exchange_get_template_part( 'content', 'store/elements/quick-view' );
 	}
-
-	remove_action( 'it_exchange_content_store_before_permalink_element', 'it_exchange_quick_view_content_store_after_product_info_hook' );
-
-	it_exchange_get_template_part( 'content', 'store/elements/quick-view' );
 }
 add_action( 'it_exchange_content_store_after_featured_image_element', 'it_exchange_quick_view_content_after_featured_image_hook' );
 
