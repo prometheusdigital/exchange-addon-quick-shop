@@ -15,7 +15,7 @@
 ?>
 
 <?php do_action( 'it_exchange_quick_view_added_before_product_images_loop' ); ?>
-<?php foreach ( it_exchange_get_template_part_elements( 'content_quick_view_added', 'cart_summary', array( 'item-count', 'subtotal', 'total', 'checkout' ) ) as $detail ) : ?>
+<?php foreach ( it_exchange_get_template_part_elements( 'content_quick_view_added', 'cart_summary', array( 'item-count', 'subtotal', 'total', 'view-cart', 'checkout' ) ) as $detail ) : ?>
 	<?php it_exchange_get_template_part( 'content-quick-view-added/elements/' . $detail ); ?>
 <?php endforeach; ?>
 <?php do_action( 'it_exchange_quick_view_added_after_product_images_loop' ); ?>
