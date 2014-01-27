@@ -27,11 +27,6 @@
 			<?php it_exchange_get_template_part( 'content-quick-view-added/loops/product-info' ); ?>
 		</div>
 	</div>
-	<div class="it-exchange-cart-summary-title it-exchange-product-added-title">
-		<div class="it-exchange-inner">
-			<?php _e( 'Cart Summary', 'LION' ); ?>
-		</div>
-	</div>
 	<div class="it-exchange-cart-summary">
 		<div class="it-exchange-inner it-exchange-clearfix">
 			<?php it_exchange_get_template_part( 'content-quick-view-added/loops/cart-summary' ); ?>
