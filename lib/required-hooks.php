@@ -13,7 +13,7 @@
  * @return void
 */
 function it_exchange_quick_view_addon_show_version_nag() {
-	if ( version_compare( $GLOBALS['it_exchange']['version'], '1.7.15', '<' ) ) {
+	if ( version_compare( $GLOBALS['it_exchange']['version'], '1.7.16', '<' ) ) {
 		?>
 		<div class="it-exchange-nag it-exchange-add-on-min-version-nag">
 			<?php printf( __( 'The Quick View add-on requires iThemes Exchange version 1.7.16 or greater. %sPlease upgrade Exchange%s.', 'LION' ), '<a href="' . admin_url( 'update-core.php' ) . '">', '</a>' ); ?>
@@ -31,7 +31,7 @@ function it_exchange_quick_view_addon_show_version_nag() {
 	if ( function_exists( 'it_exchange_register_stripe_addon' ) ) {
 		$exchange_addon_stripe = get_plugin_data( plugin_dir_path( dirname( dirname( __FILE__  ) ) ) . 'exchange-addon-stripe/exchange-addon-stripe.php' );
 
-		if ( version_compare( $exchange_addon_stripe['Version'], '1.2.0', '<' ) ) {
+		if ( version_compare( $exchange_addon_stripe['Version'], '1.1.14', '<' ) ) {
 			?>
 			<div class="it-exchange-nag it-exchange-add-on-min-version-nag">
 				<?php printf( __( 'The Quick View add-on requires Exchange Add-on Stripe version 1.2.0 or greater to function properly.', 'LION' ) ); ?>
