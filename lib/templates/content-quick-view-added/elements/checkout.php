@@ -15,6 +15,6 @@
 */
 ?>
 
-<?php do_action( 'it_exchange_content_quick_shop_added_before_checkout_element' ); ?>
+<?php do_action( 'it_exchange_content_quick_view_added_before_checkout_element' ); ?>
 <?php it_exchange( 'cart', 'checkout' ); ?>
-<?php do_action( 'it_exchange_content_quick_shop_added_after_checkout_element' ); ?>
+<?php do_action( 'it_exchange_content_quick_view_added_after_checkout_element' ); ?>

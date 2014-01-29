@@ -15,8 +15,8 @@
 */
 ?>
 
-<?php do_action( 'it_exchange_content_quick_shop_added_before_totals_total_element' ); ?>
+<?php do_action( 'it_exchange_content_quick_view_added_before_totals_total_element' ); ?>
 <div class="it-exchange-quick-view-totals it-exchange-quick-view-total">
 	<p><?php _e( 'Total', 'LION' ); ?><span><?php it_exchange( 'cart', 'total' ); ?></span></p>
 </div>
-<?php do_action( 'it_exchange_content_quick_shop_added_after_totals_total_element' ); ?>
+<?php do_action( 'it_exchange_content_quick_view_added_after_totals_total_element' ); ?>

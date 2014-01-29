@@ -15,8 +15,8 @@
 */
 ?>
 
-<?php do_action( 'it_exchange_content_quick_shop_added_before_checkout_element' ); ?>
+<?php do_action( 'it_exchange_content_quick_view_added_before_item_count_element' ); ?>
 <div class="it-exchange-quick-view-cart-item-count">
 	<?php echo sprintf( translate_nooped_plural( _n_noop( 'Currently %s item in your cart.', 'Currently %s items in your cart.' ), it_exchange( 'cart.get-item-count' ) ), it_exchange( 'cart.get-item-count' ) ); ?>
 </div>
-<?php do_action( 'it_exchange_content_quick_shop_added_after_checkout_element' ); ?>
+<?php do_action( 'it_exchange_content_quick_view_added_after_item_count_element' ); ?>
