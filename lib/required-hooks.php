@@ -86,7 +86,9 @@ add_filter( 'it_exchange_possible_template_paths', 'it_exchange_quick_view_addon
  * @since 1.0.0
 */
 function it_exchange_quick_view_content_store_after_product_info_hook() {
-	it_exchange_get_template_part( 'content', 'store/elements/quick-view' );
+	if ( ! it_exchange( 'product', 'has-featured-image' ) ) {
+		it_exchange_get_template_part( 'content', 'store/elements/quick-view' );
+	}
 }
 add_action( 'it_exchange_content_store_before_permalink_element', 'it_exchange_quick_view_content_store_after_product_info_hook' );
 
@@ -98,8 +100,6 @@ add_action( 'it_exchange_content_store_before_permalink_element', 'it_exchange_q
 */
 function it_exchange_quick_view_content_after_featured_image_hook() {
 	if ( it_exchange( 'product', 'has-featured-image' ) ) {
-		remove_action( 'it_exchange_content_store_before_permalink_element', 'it_exchange_quick_view_content_store_after_product_info_hook' );
-
 		it_exchange_get_template_part( 'content', 'store/elements/quick-view' );
 	}
 }
