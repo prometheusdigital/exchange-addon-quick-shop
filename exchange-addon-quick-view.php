@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: iThemes Exchange - Quick View Add-on
- * Version: 1.0.0
+ * Version: 0.0.3
  * Description: Adds the quick view feature to iThemes Exchange store products.
  * Plugin URI: http://ithemes.com/exchange/quick-view/
  * Author: iThemes
